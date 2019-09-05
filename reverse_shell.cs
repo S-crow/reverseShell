@@ -3,7 +3,7 @@ using System.Text;
 using System.IO;
 using System.Diagnostics;
 using System.ComponentModel;
-import System.Linq from System.Core;
+using System.Linq from System.Core;
 using System.Net;
 using System.Net.Sockets;
 
