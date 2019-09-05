@@ -1,4 +1,4 @@
-# Simple reverse shell in C# code and bypass AV solutions  
+# Reverse shell C# bypassing AV solutions  
 
 ## Compile code to .exe  
 sudo apt install mono-complete  
