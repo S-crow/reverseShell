@@ -57,7 +57,7 @@ using System.Workflow.Activities;
                     streamWriter.WriteLine(strOutput);
                     streamWriter.Flush();
                 }
-                catch (Exception err) { }
+                catch (Exception) { }
             }
         }
 
