@@ -59,7 +59,7 @@ using System.Workflow.Activities;
                     streamWriter.WriteLine(strOutput);
                     streamWriter.Flush();
                 }
-                catch (Exception) { }
+                catch (Exception) { Console.WriteLine("Hello World!");}
             }
         }
 
