@@ -20,7 +20,7 @@ using System.Threading;
 		{
 			Thread.Sleep(2000);
 			
-			using(TcpClient client = new TcpClient("172.26.20.135", 443))
+			using(TcpClient client = new TcpClient("192.168.0.9", 443))
 			{
 				using(Stream stream = client.GetStream())
 				{
